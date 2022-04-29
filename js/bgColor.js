@@ -1,24 +1,22 @@
-td = document.getElementsByClassName("media");
-valorMedia = 0;
-valor = 1;
-teste = document.querySelector('h1');
+const tds = document.getElementsByClassName('media');
+var valorMedia = 0;
+var valor = 1;
 
 function bgColor(td) {
-    if (td.textContent>6){
-            td.style.backgroundColor = 'green';
+console.log(td)
+    if (Number(td.textContent)>6){
+            td.classList.toggle('aprovado');
             return(td)       
     }else {
-        td.style.backgroundColor = 'red';           
+        td.classList.toggle('reprovado');         
         return(td)
         
     }
     
 }
 
-while (valor != td.length) {
-    bgColor(td[valor]);
-    valor++
-} 
- 
+Array.from(tds).forEach(element => {
+    bgColor(element)
+});
 
 

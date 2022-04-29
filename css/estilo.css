@@ -46,6 +46,14 @@ td:hover {
     background-color: "transparent";
 }
 
+.aprovado {
+    background-color: green;
+}
+
+.reprovado {
+    background-color: red;
+}
+
 .div-tabela {
     display: flex;
     margin: 30px;
