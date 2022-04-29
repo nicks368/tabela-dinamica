@@ -1,0 +1,70 @@
+*{
+    font-size: large;
+    font-family: Verdana;
+}
+
+.reprovado {
+    background-color: red;
+}
+
+.tabela{
+    text-align: center;
+    border: 1.5px solid black;
+    font-size: x-large;
+    margin: auto;
+}
+td{
+    border: 1px solid black;
+    font-family: Verdana;
+}
+.nota:hover{
+    background-color: lightgray;
+}
+.linha1{
+    background-color: lightsteelblue;
+    font-family:Verdana;
+    font-weight: bold;
+}
+
+.media{
+    background-color: lightgray;
+}
+.media:hover{
+    background-color:  lightsteelblue;
+}
+.aluno{
+    background-color: lightsteelblue;
+}
+
+.botao{
+    color: darkblue;
+    background-color: lightsteelblue;
+    font-size: large;
+}
+.botao:hover{
+    background-color: lightgray;
+}
+
+.div-tabela {
+    display: flex;
+    margin: 30px;
+}
+.formulario{
+    
+    text-align: center;
+}
+.campo{
+    margin-bottom: 2%;
+}
+.label:hover{
+    background-color: lightgray;
+}
+.campo-nome{
+    margin-bottom: 2%;
+    margin-right: 6%;
+} 
+
+.campo-matricula{
+    margin-bottom: 2%;
+    margin-right: 1.6%;
+} 
