@@ -5,9 +5,10 @@
 ?>
 
 <!doctype html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta charset="UTF-8" lang="pt-br">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" >
         <title> Tabela de Notas </title>
         <link href="./css/estilo.css" rel="stylesheet">
     </head>
@@ -24,7 +25,7 @@
 
         </table>
         </div>
-
+        
         <form method="post" action="conexao/processa.php" class="formulario">
             <div class="dados">
                 <div class="campo-matricula"> 
@@ -41,17 +42,17 @@
             <div class="notas">
                 <div class="campo-nota"> 
                     <label class="label-notas"> Nota 1: </label> <br>
-                    <input type="number" max="10" min="0" name="nota1" id="nota1" placeholder="1º Nota">
+                    <input type="number" step="0.5" max="10" min="0" name="nota1" id="nota1" placeholder="1º Nota">
                 </div> 
 
                 <div class="campo-nota"> 
                     <label class="label-notas"> Nota 2: </label> <br>
-                    <input type="number" max="10" min="0" name="nota2" id="nota2" placeholder="2º Nota">
+                    <input type="number" step="0.5" max="10" min="0" name="nota2" id="nota2" placeholder="2º Nota">
                 </div> 
 
                 <div class="campo-nota"> 
                     <label class="label-notas"> Nota 3: </label> <br>
-                    <input type="number" max="10" min="0" name="nota3" id="nota3" placeholder="3º Nota">
+                    <input type="number" step="0.5" max="10" min="0" name="nota3" id="nota3" placeholder="3º Nota">
                 </div> 
             </div>
 

@@ -40,6 +40,7 @@ td:hover {
 
 .aluno{
     background-color: #BBBBBB;
+    text-transform: capitalize;
 }
 
 .media {
@@ -47,11 +48,11 @@ td:hover {
 }
 
 .aprovado {
-    background-color: green;
+    background-color: #46E529;
 }
 
 .reprovado {
-    background-color: red;
+    background-color: #E52929;
 }
 
 .div-tabela {
@@ -64,7 +65,7 @@ td:hover {
 .formulario{
     text-align: center;
     width: 320px;
-    height: 280px;
+    height: 290px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -122,14 +123,18 @@ td:hover {
     width: 75px;
     padding: 5px;
     font-size: medium; 
-    
+    margin-bottom: 10px;
 }
 
 .botao{
     padding: 6px 10px;
-    background-color: lightsteelblue;
+    background-color: #2236FF;
+    color: white;
+    border-color: #2236FF;
+    border-style: outset;
+    text-shadow: none;
     font-size: medium;
 }
 .botao:hover{
-    background-color: lightgray;
+    background-color: #1C2CD3;
 }
