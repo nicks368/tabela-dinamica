@@ -145,24 +145,13 @@
             echo( 
             '<tr>    
                 <td class="aluno">'.$dados[$numAluno]->NOME.'</td>
-                <td classs="nota">'.$dados[$numAluno]->NOTA1.'</td>
-                <td classs="nota">'.$dados[$numAluno]->NOTA2.'</td>
-                <td classs="nota">'.$dados[$numAluno]->NOTA3.'</td>
-                <td classs="media"> </td>
+                <td class="nota">'.$dados[$numAluno]->NOTA1.'</td>
+                <td class="nota">'.$dados[$numAluno]->NOTA2.'</td>
+                <td class="nota">'.$dados[$numAluno]->NOTA3.'</td>
+                <td class="media"> </td>
              </tr>');
             
-            //echo 'Aluno ' . $numAluno;
-            //echo 'matricula: ' . $dados[$numAluno]->MATRICULA;
             $numAluno++;
         } 
-        //echo 'matricula: ' . $dados['0']->MATRICULA;
-        
-        //echo $passagem;
-
-        
-
-        //var_dump($dados);
-
-        
     }
 ?>
