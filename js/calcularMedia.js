@@ -33,9 +33,6 @@ while (linha != document.querySelectorAll('tr').length) {
 }
 
 
-
-
-
 /*while (linha<7){
     
     while (coluna<4){

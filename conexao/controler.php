@@ -34,7 +34,8 @@
         $consulta->execute();
     
         if ($consulta->rowCount() > 0) {
-            echo "Já possui cadastro!";
+                $_SESSION['mensagem'] = "Já possui cadastro!";
+                header("Location: ../index.php");
         } else {
             //Cadastrando um novo
             $str_sql = "INSERT INTO 2022_tb_aluno (matricula, nomeAluno, nota1, nota2, nota3)";
@@ -61,10 +62,11 @@
     }
 
     function editarAluno($matricula, $nome, $nota1, $nota2, $nota3){ 
+        session_start();
         require "./conexao.php";
 
          // Atualiza os dados
-        $str_sql = "UPDATE 2022_tb_aluno SET matricula = :Matricula, nomeAluno = :Nome, nota1 = :Nota1, 
+        $str_sql = "UPDATE 2022_tb_aluno SET nomeAluno = :Nome, nota1 = :Nota1, 
         nota2 = :Nota2, nota3 = :Nota3, WHERE matricula = :Matricula";
     
         $str_salvar = $conexao->prepare($str_sql);
@@ -76,28 +78,37 @@
     
         if($str_salvar->execute()){
             //Salvo com sucesso
-            echo "Cadastrado atualizado com sucesso!";
+            $_SESSION['mensagem'] = "Aluno Editado com Sucesso!";
+            header("Location: ../index.php");
+            //echo "Cadastrado atualizado com sucesso!";
         }else {
             //Ocorreu um erro
-            echo "Houve problemas!";
+            $_SESSION['mensagem'] = "Erro ao Editar";
+            header("Location: ../index.php");
+            //echo "Houve problemas!";
         }
     }
 
     function deletarAluno($matricula){
+        session_start();
         require "./conexao.php";
 
         // Exclui os dados
-        $str_sql = "DELETE * FROM 2022_tb_aluno WHERE matricula = :Matricula";
+        $str_sql = "DELETE FROM 2022_tb_aluno WHERE matricula = :Matricula";
 
         $str_salvar = $conexao->prepare($str_sql);
         $str_salvar->bindParam(':Matricula', $matricula);
 
         if($str_salvar->execute()){
             //Excluido com sucesso
-            echo "Cadastrado excluido com sucesso!";
+            $_SESSION['mensagem'] = "Aluno Deletado com Sucesso!";
+            header("Location: ../index.php");
+            //echo "Cadastrado excluido com sucesso!";
         }else {
             //Ocorreu um erro
-            echo "Houve problemas!";
+            $_SESSION['mensagem'] = "Erro ao Deletar";
+            header("Location: ../index.php");
+            //echo "Houve problemas!";
         }
     }
     
@@ -141,10 +152,12 @@
                   <td class="campo">Média</td>
                </tr>');
         
+        // <tr id="' .$dados[$numAluno]->MATRICULA . '"> define o id da tr como o numero de matricula do aluno    
+
         while ($numAluno != count($dados)){   
             echo( 
-            '<tr>    
-                <td class="aluno">'.$dados[$numAluno]->NOME.'</td>
+            '<tr id="' .$dados[$numAluno]->MATRICULA. '">    
+                <td class="aluno"><button id="' .$numAluno . '">'.$dados[$numAluno]->NOME.'</button></td>
                 <td class="nota">'.$dados[$numAluno]->NOTA1.'</td>
                 <td class="nota">'.$dados[$numAluno]->NOTA2.'</td>
                 <td class="nota">'.$dados[$numAluno]->NOTA3.'</td>

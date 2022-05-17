@@ -18,6 +18,14 @@ h1 {
     margin: auto;
     
 }
+
+.tabela button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
 td{
     border: 1px solid black;
     font-family: Verdana;
@@ -48,11 +56,11 @@ td:hover {
 }
 
 .aprovado {
-    background-color: #46E529;
+    color: #139B00;
 }
 
 .reprovado {
-    background-color: #E52929;
+    color: #E52929;
 }
 
 .div-tabela {
@@ -65,7 +73,7 @@ td:hover {
 .formulario{
     text-align: center;
     width: 320px;
-    height: 290px;
+    height: 330px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -126,6 +134,14 @@ td:hover {
     margin-bottom: 10px;
 }
 
+select {
+    font-size: medium;
+}
+
+select option{
+    font-size: medium;
+}
+
 .botao{
     padding: 6px 10px;
     background-color: #2236FF;
@@ -134,6 +150,7 @@ td:hover {
     border-style: outset;
     text-shadow: none;
     font-size: medium;
+    margin-top: 15px;
 }
 .botao:hover{
     background-color: #1C2CD3;
