@@ -23,7 +23,7 @@
         session_start();
         require "./conexao.php";
 
-        $consulta = "SELECT * FROM 2022_tb_aluno WHERE matricula = :Matricula"; 
+        $consulta = "SELECT * FROM tb_pw_aluno WHERE matricula = :Matricula"; 
         // prepara a instrução SQL para receber uma variavel no momento de execução 
         $consulta = $conexao->prepare($consulta);
     
@@ -38,7 +38,7 @@
                 header("Location: ../index.php");
         } else {
             //Cadastrando um novo
-            $str_sql = "INSERT INTO 2022_tb_aluno (matricula, nomeAluno, nota1, nota2, nota3)";
+            $str_sql = "INSERT INTO tb_pw_aluno (matricula, nomeAluno, nota1, nota2, nota3)";
             $str_sql = $str_sql . "VALUES (:Matricula, :Nome, :Nota1, :Nota2, :Nota3)";
     
             $str_salvar = $conexao->prepare($str_sql);
@@ -66,8 +66,8 @@
         require "./conexao.php";
 
          // Atualiza os dados
-        $str_sql = "UPDATE 2022_tb_aluno SET nomeAluno = :Nome, nota1 = :Nota1, 
-        nota2 = :Nota2, nota3 = :Nota3, WHERE matricula = :Matricula";
+        $str_sql = "UPDATE tb_pw_aluno SET nomeAluno = :Nome, nota1 = :Nota1, 
+        nota2 = :Nota2, nota3 = :Nota3 WHERE matricula = :Matricula";
     
         $str_salvar = $conexao->prepare($str_sql);
         $str_salvar->bindParam(':Matricula', $matricula);
@@ -94,7 +94,7 @@
         require "./conexao.php";
 
         // Exclui os dados
-        $str_sql = "DELETE FROM 2022_tb_aluno WHERE matricula = :Matricula";
+        $str_sql = "DELETE FROM tb_pw_aluno WHERE matricula = :Matricula";
 
         $str_salvar = $conexao->prepare($str_sql);
         $str_salvar->bindParam(':Matricula', $matricula);
@@ -118,7 +118,7 @@
         require "./conexao/conexao.php";
         global $dados;
 
-        $consulta = "SELECT * FROM 2022_tb_aluno"; 
+        $consulta = "SELECT * FROM tb_pw_aluno"; 
 
         //criando statament ou query
             $stmt_listar = $conexao->prepare($consulta);
