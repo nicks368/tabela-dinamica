@@ -79,6 +79,7 @@
         <script type="text/javascript" src="./js/calcularMedia.js"></script>
         <script type="text/javascript" src="./js/corMedia.js"></script>
         <script type="text/javascript" src="./js/click.js"></script>
+        <script type="text/javascript" src="./js/getFetch.js"></script>
         
     </body>
 </html>

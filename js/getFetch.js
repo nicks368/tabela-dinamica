@@ -1,15 +1,13 @@
 function buscarDados(){
-    fetch("URL")
+    fetch("./getPhp.php")
         .then (function(response){
             return response.json();
         })
         .then (function(response){
             response.forEach(element => {
-                criarLinha(element.id, element.nome, element.preco);    
+                console.log(element.matricula);    
             });
         })
 }
 
 buscarDados();
-
-
